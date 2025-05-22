@@ -9,32 +9,100 @@
 </head>
 <body class="bg-light">
     <div class="container my-5">
-        <h1 class="text-center mb-4">Lista de Criptomoedas</h1>
+        <h1 class="text-center mb-4">Carteira do Milhão</h1>
         <div class="table-responsive">
+
             <table class="table table-bordered table-striped">
                 <thead class="table-dark">
                     <tr>
-                        <th>Moeda</th>
-                        <th>Quantidade de moedas compradas</th>
-                        <th>Preço médio de compra</th>
-                        <th>Preço atual</th>
-                        <th>Máxima histórica</th>
-                        <th>Custo de compra</th>
-                        <th>Lucro</th>
-                        <th>Lucro percentual</th>
+                        <th colspan="9" class="text-center">Valor Total Investido</th>
+                        <th colspan="9"  class="text-center">Valor Total Atual</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="9" class="text-center">
+                            $ {{ context.resultado_total[0].valor_total_investido }}
+                        </td>
+                        <td colspan="9" class="text-center">
+                            $ {{ context.resultado_total[0].valor_total_atual }}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+             <table class="table table-bordered table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th colspan="9" class="text-center">Média de Lucros</th>
+                        <th colspan="9"  class="text-center">Média de perdas</th>
+                        <th colspan="9"  class="text-center">Percentual de Lucros</th>
+                        <th colspan="9"  class="text-center">Percentual de perdas</th>
+                        <th colspan="9"  class="text-center">Resultado Total</th>
+                        <th colspan="9"  class="text-center">Percentual Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="9" class="text-center">
+                            $ {{ context.resultado_total[0].resultado_ganho }}
+                        </td>
+                        <td colspan="9" class="text-center">
+                            $ {{ context.resultado_total[0].resultado_perda }}
+                        </td>
+                        <td colspan="9" class="text-center">
+                            {{ context.resultado_total[0].resultado_ganho_perc }} %
+                        </td>
+                        <td colspan="9" class="text-center">
+                            {{ context.resultado_total[0].resultado_perda_perc }} %
+                        </td>
+                        <td colspan="9" class="text-center">
+                            $ {{ context.resultado_total[0].resultado_total_lucro }}
+                        </td>
+                        <td colspan="9" class="text-center">
+                            {{ context.resultado_total[0].resultado_total_perc }} %
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="table table-bordered table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th class="text-center">Moeda</th>
+                        <th class="text-center">Quantidade de moedas</th>
+                        <th class="text-center">Preço médio</th>
+                        <th class="text-center">Preço atual</th>
+                        <th class="text-center">Máxima histórica</th>
+                        <th class="text-center">Valor Investido</th>
+                        <th class="text-center">Valor Atual</th>
+                        <th class="text-center">Lucro</th>
+                        <th class="text-center">Lucro percentual</th>
                     </tr>
                 </thead>
                 <tbody>
                    {% for crypto in context.cryptocurrencies %}
                     <tr>
-                        <td>{{ crypto.name }}</td>
+                        <td class="text-center">{{ crypto.name }}</td>
                         <td>{{ crypto.qnt}}</td>
-                        <td>{{ crypto.avg_cost}}</td>
-                        <td>{{ crypto.price }}</td>
-                        <td>{{ crypto.max_historica}}</td>
-                        <td>{{ crypto.spent}}</td>
-                        <td>{{ crypto.lucro}}</td>
-                        <td>{{ crypto.percentual}}</td>
+                        <td>$ {{ crypto.value_invest}}</td>
+                        <td id="preco-{{ crypto.name|replace(' ', '') }}">$ {{ crypto.price }}</td>
+                        <td>$ {{ crypto.max_historica}}</td>
+                        <td>$ {{ crypto.spent}}</td>
+                        <td>$ {{ crypto.valor_atual}}</td>
+                        {% if crypto.lucro > 0 %}
+                            <td class="text-success">$ {{ crypto.lucro}}</td>
+                        {% elif crypto.lucro < 0 %}
+                            <td class="text-danger">$ {{ crypto.lucro}}</td>
+                        {% else %}
+                            <td>$ {{ crypto.lucro}}</td>
+                        {% endif %}
+                        {% if crypto.percentual > 0 %}
+                            <td class="text-success">{{ crypto.percentual}} %</td>
+                        {% elif crypto.percentual < 0 %}
+                            <td class="text-danger">{{ crypto.percentual}} %</td>
+                        {% else %}
+                            <td>{{ crypto.percentual}} %</td>
+                        {% endif %}
                     </tr>
                     {% endfor %} 
                 </tbody>
@@ -42,5 +110,56 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Guarda os preços atuais para animação
+        const precosAtuais = {};
+
+        // Função para animar a transição do preço
+        function animarNumero(element, de, para, duracao = 2000) {
+            const inicio = performance.now();
+            function animar(agora) {
+                const progresso = Math.min((agora - inicio) / duracao, 1);
+                const valor = de + (para - de) * progresso;
+                element.textContent = Number(valor).toFixed(6);
+                if (progresso < 1) {
+                    requestAnimationFrame(animar);
+                } else {
+                    element.textContent = Number(para).toFixed(6);
+                }
+            }
+            requestAnimationFrame(animar);
+        }
+        // Função auxiliar para aguardar um tempo
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        // Atualiza os preços um por vez, do topo ao final
+        async function atualizarPrecos() {
+            const response = await fetch('/crypto/precos');
+            const data = await response.json();
+            for (const crypto of data) {
+                const id = "preco-" + crypto.name.replace(/ /g, "");
+                const precoTd = document.getElementById(id);
+                if (precoTd) {
+                    const precoNovo = parseFloat(crypto.price);
+                    const precoAntigo = precosAtuais[crypto.name] !== undefined ? precosAtuais[crypto.name] : parseFloat(precoTd.textContent.replace(",", "."));
+                    if (!isNaN(precoNovo) && !isNaN(precoAntigo)) {
+                        animarNumero(precoTd, precoAntigo, precoNovo, 800); // ajuste a duração se quiser
+                        precosAtuais[crypto.name] = precoNovo;
+                        await sleep(300); // espera 300ms antes de atualizar o próximo
+                    }
+                }
+            }
+        }
+
+        // Inicializa os preços atuais
+        document.addEventListener("DOMContentLoaded", function() {
+            {% for crypto in context.cryptocurrencies %}
+                precosAtuais["{{ crypto.name }}"] = parseFloat("{{ crypto.price }}");
+            {% endfor %}
+            setInterval(atualizarPrecos, 5000);
+        });
+    </script>
 </body>
 </html>

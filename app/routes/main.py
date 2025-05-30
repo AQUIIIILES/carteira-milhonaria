@@ -1,5 +1,5 @@
 from flask import Flask, Blueprint
-from views import crypto
+from app.routes.views import crypto
 
 app = Flask(__name__)
 main = Blueprint('main', __name__)

@@ -1,0 +1,95 @@
+html {
+    background: #fff; /* cor de fundo fora do body */
+}
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    /* background: linear-gradient(90deg, #4A00E0 0%, #8E2DE2 50%, #1a1a2e 100%); */
+    background: linear-gradient(90deg, #4A00E0 0%, #8E2DE2 50%, #4A00E0 100%);
+    border-radius: 12px;
+}
+
+.custom-box.MuiBox-root.custom-box {
+    display: flex;
+    margin-top: 16px;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+}
+
+.custom-box1.MuiBox-root.custom-box1 {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2px;
+    margin-bottom: 16px;
+    font-family: "Montserrat, sans-serif";
+}
+
+.custom-paper1.MuiPaper-root.custom-paper1 {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    padding: 24px;
+    margin-bottom: 16px;
+    background: linear-gradient(90deg, #8E2DE2 0%, #4A00E0 100%);
+}
+
+.custom-paper2.MuiPaper-root.custom-paper2 {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    padding: 8px;
+    margin-top: 16px;
+    background: #1a1a2e;
+}
+
+.custom-typography1.MuiTypography-root.custom-typography1 {
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+.custom-table, .MuiTableCell-root.custom-table {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: #00eaff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.custom-data-grid {
+    border-radius: 4px !important;
+    font-size: 19px !important;
+}
+
+.custom-data-grid .MuiDataGrid-columnHeaders,
+.custom-data-grid .MuiDataGrid-columnHeaderTitle {
+    font-weight: bold !important;
+}
+
+.custom-data-grid .MuiDataGrid-columnHeaders {
+    background: #1a1a2e !important;
+    color: #e0e0e0 !important;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.custom-data-grid .MuiDataGrid-columnHeaderTitle {
+    white-space: normal !important;
+    line-height: 1.5 !important;
+    text-align: center !important;
+    font-size: 18px !important;
+}
+
+.custom-data-grid .MuiDataGrid-row {
+    font-weight: bold !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 17px;
+}
+
+.custom-data-grid .MuiDataGrid-row:hover {
+    background: #e3f2fd !important;
+}

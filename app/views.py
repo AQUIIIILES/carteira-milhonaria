@@ -102,7 +102,7 @@ class Cryptocurrency:
             self.symbol = data.get("symbol", {}).upper()
             self.currentPrice = float(data.get("market_data", {}).get("current_price", {}).get("usd", "N/A"))
             self.calculate_values()
-            time.sleep(15) # Atraso de 1 minuto
+            time.sleep(15) # Atraso de 15 segundos para respeitar o limite da API coingeko
                 
 class CryptoPortfolio:
     def __init__(self):

@@ -54,10 +54,12 @@ function formatCurrency(moeda, value) {
   if (
     moeda === "SHIB" ||
     moeda === "BABYDOGE" ||
-    moeda === "FDUSD" ||
-    moeda === "USDC" ||
     moeda === "LUNC" ||
-    moeda === "GALA"
+    moeda === "GALA" ||
+    moeda === "DOME" ||
+    moeda === "HERO" ||
+    moeda === "BLOK" ||
+    moeda === "AIFUN"
   ) {
     return num.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', minimumFractionDigits: 2, maximumFractionDigits: 10 }).replace("R$", "$ ");
   }

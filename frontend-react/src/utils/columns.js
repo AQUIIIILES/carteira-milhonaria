@@ -33,7 +33,7 @@ export function getColumns() {
       }
     },
     {
-      field: "value_invest",
+      field: "middlePrice",
       headerName: "Preço\nmédio",
       flex: 1,
       headerAlign: "center",
@@ -49,7 +49,7 @@ export function getColumns() {
       },
     },
     {
-      field: "price",
+      field: "currentPrice",
       headerName: "Preço\natual",
       flex: 1,
       headerAlign: "center",
@@ -65,7 +65,7 @@ export function getColumns() {
       },
     },
     {
-      field: "max_historica",
+      field: "maxHistoric",
       headerName: "Máxima\nhistórica",
       flex: 1,
       headerAlign: "center",
@@ -81,7 +81,7 @@ export function getColumns() {
       },
     },
     {
-      field: "spent",
+      field: "investValue",
       headerName: "Valor\nInvestido",
       flex: 1,
       headerAlign: "center",
@@ -97,7 +97,7 @@ export function getColumns() {
       },
     },
     {
-      field: "valor_atual",
+      field: "currentValue",
       headerName: "Valor\nAtual",
       flex: 1,
       headerAlign: "center",

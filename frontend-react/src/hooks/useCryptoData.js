@@ -7,7 +7,7 @@ export function useCryptoData() {
 
   const fetchData = async () => {
     try {
-      const res = await fetch("http://localhost:5001/crypto/precos");
+      const res = await fetch("http://localhost:5001/cryptos");
       const data = await res.json();
       setCryptos(data.cryptos.map((crypto, idx) => ({ id: idx, ...crypto })));
       setResultTotal(data.result_total);

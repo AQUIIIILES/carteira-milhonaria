@@ -5,11 +5,11 @@ def create_app():
     app = Flask(__name__)
     CORS(app)
 
-    # Importa e registra as rotas
-    from .routes.main import main
-    from .routes.views import crypto
+    # Importa e registra os blueprints
+    from .main import main as main_blueprint
+    from .routes import crypto as crypto_blueprint
 
-    app.register_blueprint(main)
-    app.register_blueprint(crypto)
+    app.register_blueprint(main_blueprint)
+    app.register_blueprint(crypto_blueprint)
 
     return app

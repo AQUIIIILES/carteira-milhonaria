@@ -83,7 +83,7 @@ export default function CryptoTable() {
                   Percentual de Perdas
                 </TableCell>
                 <TableCell className="custom-table">
-                  Resultado percentual
+                  Resultado percentual total
                 </TableCell>
                 <TableCell className="custom-table">
                   Resultado total

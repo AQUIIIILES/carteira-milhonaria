@@ -8,7 +8,7 @@ walletBinance = {
     "SHIBUSDT": {"qnt": 5597719.49, "middlePrice": 0.000014, "maxHistoric": 0.000086, "investValue": 78.37},
     "GALAUSDT": {"qnt": 4505.34, "middlePrice": 0.018, "maxHistoric": 0.82, "investValue": 80.65},
     "MANAUSDT": {"qnt": 73.91, "middlePrice": 0.274, "maxHistoric": 5.85, "investValue": 20.24},
-    "DOTUSDT": {"qnt": 11.98, "middlePrice": 3.970, "maxHistoric": 54.98, "investValue": 47.56},
+    "DOTUSDT": {"qnt": 13.2, "middlePrice": 3.980, "maxHistoric": 54.98, "investValue": 51.98},
     "SANDUSDT": {"qnt": 80.89, "middlePrice": 0.249, "maxHistoric": 8.4, "investValue": 20.17},
     "LUNCUSDT": {"qnt": 192170.24, "middlePrice": 0.000081, "maxHistoric": 0.0009, "investValue": 15.50},
     "DYDXUSDT": {"qnt": 28.36, "middlePrice": 0.960, "maxHistoric": 4.52, "investValue": 27.23},
@@ -26,15 +26,15 @@ walletBinance = {
     "BNBUSDT": {"qnt": 0.0067, "middlePrice": 620.00, "maxHistoric": 720, "investValue": 4.19},
     "ASTRUSDT": {"qnt": 1925.69, "middlePrice": 0.065, "maxHistoric": 0.42, "investValue": 126.05},
     "FETUSDT": {"qnt": 23.51, "middlePrice": 1.56, "maxHistoric": 3.45, "investValue": 36.61},
-    "FDUSDUSDT": {"qnt": 177.54, "middlePrice": 1.00, "maxHistoric": 1, "investValue": 177.54},
+    "FDUSDUSDT": {"qnt": 1003.658, "middlePrice": 1.00, "maxHistoric": 1, "investValue": 1003.658},
     "USDCUSDT": {"qnt": 0.00, "middlePrice": 0.000, "maxHistoric": 1, "investValue": 0.00},
     "TRXUSDT": {"qnt": 23.66, "middlePrice": 0.060, "maxHistoric": 0.23, "investValue": 1.42},
     "THEUSDT": {"qnt": 31.70, "middlePrice": 1.798, "maxHistoric": 4.03, "investValue": 57.00},
     "SOLUSDT": {"qnt": 0.02355, "middlePrice": 223.779, "maxHistoric": 263.21, "investValue": 5.27},
-    "LTOUSDT": {"qnt": 274.00, "middlePrice": 0.186, "maxHistoric": 0.90, "investValue": 50.93},
     "CAKEUSDT": {"qnt": 36.88, "middlePrice": 2.03, "maxHistoric": 43.96, "investValue": 74.86},
     "PENDLEUSDT": {"qnt": 27.78, "middlePrice": 3.42, "maxHistoric": 7.50, "investValue": 95.00},
-    "PHAUSDT": {"qnt": 549, "middlePrice": 0.091, "maxHistoric": 1.39, "investValue": 50.00},    
+    "PHAUSDT": {"qnt": 549, "middlePrice": 0.091, "maxHistoric": 1.39, "investValue": 50.00},
+    "SUSDT": {"qnt": 812.68, "middlePrice": 0.3072, "maxHistoric": 1.03, "investValue": 249.99},    
 }
 
 walletCoingeko = {
@@ -44,7 +44,8 @@ walletCoingeko = {
     "aerodrome-finance": {"qnt": 175.95, "middlePrice": 0.68, "maxHistoric": 2.31, "investValue": 119.17},
     "ai-agent-layer": {"qnt": 3036.18, "middlePrice": 0.022, "maxHistoric": 0.14, "investValue": 66.79},
     "nosana": {"qnt": 12.57, "middlePrice": 4.013, "maxHistoric": 7.83, "investValue": 50.44},
-    "zircuit": {"qnt": 526.94, "middlePrice": 0.067, "maxHistoric": 0.097, "investValue": 35.49},    
+    "zircuit": {"qnt": 526.94, "middlePrice": 0.067, "maxHistoric": 0.097, "investValue": 35.49},
+    "lto-network": {"qnt": 274.00, "middlePrice": 0.186, "maxHistoric": 0.90, "investValue": 50.93},    
 }
 
 class Cryptocurrency:

@@ -26,7 +26,7 @@ walletBinance = {
     "BNBUSDT": {"qnt": 0.0067, "middlePrice": 620.00, "maxHistoric": 720, "investValue": 4.19},
     "ASTRUSDT": {"qnt": 1925.69, "middlePrice": 0.065, "maxHistoric": 0.42, "investValue": 126.05},
     "FETUSDT": {"qnt": 23.51, "middlePrice": 1.56, "maxHistoric": 3.45, "investValue": 36.61},
-    "FDUSDUSDT": {"qnt": 1003.658, "middlePrice": 1.00, "maxHistoric": 1, "investValue": 1003.658},
+    "FDUSDUSDT": {"qnt": 803.791, "middlePrice": 1.00, "maxHistoric": 1, "investValue": 803.791},
     "USDCUSDT": {"qnt": 0.00, "middlePrice": 0.000, "maxHistoric": 1, "investValue": 0.00},
     "TRXUSDT": {"qnt": 23.66, "middlePrice": 0.060, "maxHistoric": 0.23, "investValue": 1.42},
     "THEUSDT": {"qnt": 31.70, "middlePrice": 1.798, "maxHistoric": 4.03, "investValue": 57.00},
@@ -34,7 +34,8 @@ walletBinance = {
     "CAKEUSDT": {"qnt": 36.88, "middlePrice": 2.03, "maxHistoric": 43.96, "investValue": 74.86},
     "PENDLEUSDT": {"qnt": 27.78, "middlePrice": 3.42, "maxHistoric": 7.50, "investValue": 95.00},
     "PHAUSDT": {"qnt": 549, "middlePrice": 0.091, "maxHistoric": 1.39, "investValue": 50.00},
-    "SUSDT": {"qnt": 812.68, "middlePrice": 0.3072, "maxHistoric": 1.03, "investValue": 249.99},    
+    "SUSDT": {"qnt": 812.68, "middlePrice": 0.3072, "maxHistoric": 1.03, "investValue": 249.99},
+    "VIRTUALUSDT": {"qnt": 82.9, "middlePrice": 1.2049, "maxHistoric": 5.07, "investValue": 99.88},    
 }
 
 walletCoingeko = {

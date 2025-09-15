@@ -3,50 +3,20 @@ import time
 from decimal import Decimal
 
 walletBinance = {
-    "DOGEUSDT": {"qnt": 365.87, "middlePrice": 0.104, "maxHistoric": 0.73, "investValue": 38.05},
-    "ADAUSDT": {"qnt": 173.93, "middlePrice": 0.350, "maxHistoric": 3.09, "investValue": 60.88},
-    "SHIBUSDT": {"qnt": 5597719.49, "middlePrice": 0.000014, "maxHistoric": 0.000086, "investValue": 78.37},
-    "GALAUSDT": {"qnt": 4505.34, "middlePrice": 0.018, "maxHistoric": 0.82, "investValue": 80.65},
-    "MANAUSDT": {"qnt": 73.91, "middlePrice": 0.274, "maxHistoric": 5.85, "investValue": 20.24},
-    "DOTUSDT": {"qnt": 13.2, "middlePrice": 3.980, "maxHistoric": 54.98, "investValue": 51.98},
-    "SANDUSDT": {"qnt": 80.89, "middlePrice": 0.249, "maxHistoric": 8.4, "investValue": 20.17},
-    "LUNCUSDT": {"qnt": 192170.24, "middlePrice": 0.000081, "maxHistoric": 0.0009, "investValue": 15.50},
-    "DYDXUSDT": {"qnt": 28.36, "middlePrice": 0.960, "maxHistoric": 4.52, "investValue": 27.23},
-    "SXPUSDT": {"qnt": 153.00, "middlePrice": 0.280, "maxHistoric": 5.79, "investValue": 42.84},
-    "FLOWUSDT": {"qnt": 137.44, "middlePrice": 0.518, "maxHistoric": 42.4, "investValue": 71.19},
-    "ATOMUSDT": {"qnt": 4.22, "middlePrice": 4.787, "maxHistoric": 44.45, "investValue": 20.20},
-    "CRVUSDT": {"qnt": 330.00, "middlePrice": 0.272, "maxHistoric": 15.37, "investValue": 89.80},
-    "RVNUSDT": {"qnt": 2002.25, "middlePrice": 0.01720, "maxHistoric": 0.29, "investValue": 34.44},
-    "LINKUSDT": {"qnt": 2.19, "middlePrice": 11.680, "maxHistoric": 52.7, "investValue": 25.58},
-    "OPUSDT": {"qnt": 13.76, "middlePrice": 1.453, "maxHistoric": 4.84, "investValue": 20.00},
-    "SNXUSDT": {"qnt": 14.58, "middlePrice": 1.400, "maxHistoric": 28.53, "investValue": 20.41},
-    "POLUSDT": {"qnt": 287.16, "middlePrice": 0.350, "maxHistoric": 1.29, "investValue": 100.51},
-    "GMXUSDT": {"qnt": 4.19, "middlePrice": 24.64, "maxHistoric": 91.07, "investValue": 103.24},
-    "1MBABYDOGEUSDT": {"qnt": 22008.36, "middlePrice": 0.0000000023, "maxHistoric": 0.0000000063, "investValue": 50.62},
-    "BNBUSDT": {"qnt": 0.0067, "middlePrice": 620.00, "maxHistoric": 720, "investValue": 4.19},
-    "ASTRUSDT": {"qnt": 1925.69, "middlePrice": 0.065, "maxHistoric": 0.42, "investValue": 126.05},
-    "FETUSDT": {"qnt": 23.51, "middlePrice": 1.56, "maxHistoric": 3.45, "investValue": 36.61},
-    "FDUSDUSDT": {"qnt": 803.791, "middlePrice": 1.00, "maxHistoric": 1, "investValue": 803.791},
-    "USDCUSDT": {"qnt": 0.00, "middlePrice": 0.000, "maxHistoric": 1, "investValue": 0.00},
-    "TRXUSDT": {"qnt": 23.66, "middlePrice": 0.060, "maxHistoric": 0.23, "investValue": 1.42},
-    "THEUSDT": {"qnt": 31.70, "middlePrice": 1.798, "maxHistoric": 4.03, "investValue": 57.00},
+    "LINKUSDT": {"qnt": 39.56, "middlePrice": 25.27, "maxHistoric": 50.00, "investValue": 999.00},
+    "POLUSDT": {"qnt": 3483.88, "middlePrice": 0.286, "maxHistoric": 2.5, "investValue": 999.00},
+    "ASTRUSDT": {"qnt": 800.69, "middlePrice": 0.065, "maxHistoric": 0.42, "investValue": 52.04},
     "SOLUSDT": {"qnt": 0.02355, "middlePrice": 223.779, "maxHistoric": 263.21, "investValue": 5.27},
-    "CAKEUSDT": {"qnt": 36.88, "middlePrice": 2.03, "maxHistoric": 43.96, "investValue": 74.86},
-    "PENDLEUSDT": {"qnt": 27.78, "middlePrice": 3.42, "maxHistoric": 7.50, "investValue": 95.00},
-    "PHAUSDT": {"qnt": 549, "middlePrice": 0.091, "maxHistoric": 1.39, "investValue": 50.00},
-    "SUSDT": {"qnt": 812.68, "middlePrice": 0.3072, "maxHistoric": 1.03, "investValue": 249.99},
-    "VIRTUALUSDT": {"qnt": 82.9, "middlePrice": 1.2049, "maxHistoric": 5.07, "investValue": 99.88},    
+    "PENDLEUSDT": {"qnt": 106.43, "middlePrice": 5.21, "maxHistoric": 7.50, "investValue": 554.50},
+    "SUIUSDT": {"qnt": 261.57, "middlePrice": 3.81, "maxHistoric": 10.00, "investValue": 996.58},
+    "AAVEUSDT": {"qnt": 3.12, "middlePrice": 320.19, "maxHistoric": 600.00, "investValue": 999.00},
+    "WLDUSDT": {"qnt": 609.74, "middlePrice": 1.64, "maxHistoric": 11.00, "investValue": 999.00},
+    "ONDOUSDT": {"qnt": 849.95, "middlePrice": 1.1, "maxHistoric": 5.07, "investValue": 934.94},
+    "ENAUSDT": {"qnt": 1302.81, "middlePrice": 0.76, "maxHistoric": 5.07, "investValue": 997.30},    
 }
 
 walletCoingeko = {
-    "everdome": {"qnt": 193818.00, "middlePrice": 0.00026, "maxHistoric": 0.094, "investValue": 50.00},
-    "metahero": {"qnt": 24319.50, "middlePrice": 0.0020, "maxHistoric": 0.25, "investValue": 48.54},
-    "bloktopia": {"qnt": 53113.29, "middlePrice": 0.00094, "maxHistoric": 0.13, "investValue": 50.00},
-    "aerodrome-finance": {"qnt": 175.95, "middlePrice": 0.68, "maxHistoric": 2.31, "investValue": 119.17},
-    "ai-agent-layer": {"qnt": 3036.18, "middlePrice": 0.022, "maxHistoric": 0.14, "investValue": 66.79},
     "nosana": {"qnt": 12.57, "middlePrice": 4.013, "maxHistoric": 7.83, "investValue": 50.44},
-    "zircuit": {"qnt": 526.94, "middlePrice": 0.067, "maxHistoric": 0.097, "investValue": 35.49},
-    "lto-network": {"qnt": 274.00, "middlePrice": 0.186, "maxHistoric": 0.90, "investValue": 50.93},    
 }
 
 class Cryptocurrency:
@@ -104,7 +74,7 @@ class Cryptocurrency:
             self.symbol = data.get("symbol", {}).upper()
             self.currentPrice = float(data.get("market_data", {}).get("current_price", {}).get("usd", "N/A"))
             self.calculate_values()
-            time.sleep(15) # Atraso de 15 segundos para respeitar o limite da API coingeko
+            #time.sleep(15) # Atraso de 15 segundos para respeitar o limite da API coingeko
                 
 class CryptoPortfolio:
     def __init__(self):
